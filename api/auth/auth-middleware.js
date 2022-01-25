@@ -8,7 +8,7 @@ const restricted = (req, res, next) => {
   if (!token) {
     return next({ status: 401, message: 'You shall not pass!' })
   }
-  jwt.verify()
+  jwt.verify(token, JWT_SECRET, (err) => {})
 }
 
 // AUTHORIZATION
