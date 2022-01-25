@@ -10,7 +10,9 @@ function tokenBuilder(user) {
   const options = {
     expiresIn: '1d',
   }
-  const token = jwt.sign()
+  const token = jwt.sign(payload, JWT_SECRET, options)
+
+  return token
 }
 
 module.exports = tokenBuilder
