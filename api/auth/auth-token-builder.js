@@ -10,6 +10,7 @@ function tokenBuilder(user) {
   const options = {
     expiresIn: '1d',
   }
+  const token = jwt.sign()
 }
 
 module.exports = tokenBuilder
