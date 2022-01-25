@@ -1,5 +1,5 @@
 function tokenBuilder(user) {
-  return 'token'
+  return 'the awesome token'
 }
 
 module.exports = tokenBuilder
