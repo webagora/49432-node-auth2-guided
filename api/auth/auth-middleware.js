@@ -3,8 +3,8 @@ const { JWT_SECRET } = require('../../config')
 
 // AUTHENTICATION
 const restricted = (req, res, next) => {
-  // pull token from request
-  
+  // pull token from request ???
+  const token = req.headers.authentication
 }
 
 // AUTHORIZATION
