@@ -12,7 +12,7 @@ const restricted = (req, res, next) => {
     if (err) {
       return next({ status: 401, message: `Your token sucks: ${err.message}`})
     }
-    // here
+    req.decodedJwt = decoded
   })
 }
 
