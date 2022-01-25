@@ -1,5 +1,5 @@
 const jwt = require('jsonwebtoken')
-const { } = require('../../config')
+const {  } = require('../../config')
 
 // AUTHENTICATION
 const restricted = (req, res, next) => {
