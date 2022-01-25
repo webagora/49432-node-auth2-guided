@@ -10,12 +10,11 @@ const restricted = (req, res, next) => {
   } else {
     jwt.verify(token, JWT_SECRET, (err, decoded) => {
       if (err) {
-        next({ status: 401, message: `Your token sucks: ${err.message}`})
+        next({ status: 401, message: `Your token sucks: ${err.message}` })
       } else {
-
+        req.decodedJwt = decoded
+        next()
       }
-      req.decodedJwt = decoded
-      next()
     })
   }
 }
