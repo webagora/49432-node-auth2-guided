@@ -7,7 +7,9 @@ function tokenBuilder(user) {
     username: user.username,
     role: user.role,
   }
-  const 
+  const options = {
+    expiresIn: '1d',
+  }
 }
 
 module.exports = tokenBuilder
