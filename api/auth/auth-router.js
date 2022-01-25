@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs')
-const makeToken = require('./')
+const makeToken = require('./auth-token-builder')
 const router = require('express').Router()
 const User = require('../users/users-model.js')
 
@@ -27,8 +27,8 @@ router.post('/login', (req, res, next) => {
     .then(([user]) => {
       if (user && bcrypt.compareSync(password, user.password)) {
         // here we make token and send it to client in res.body
-        // const token = makeToken(user)
-        res.status(200).json({ message: `Welcome back ${user.username}...` })
+        const token = makeToken(user)
+        res.status(200).json({ message: `Welcome back ${user.username}...`, token })
       } else {
         next({ status: 401, message: 'Invalid Credentials' })
       }
