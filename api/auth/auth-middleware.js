@@ -19,7 +19,7 @@ const restricted = (req, res, next) => {
 }
 
 // AUTHORIZATION
-const checkRole = (req, res, next) => {
+const checkRole = role => (req, res, next) => {
   next()
 }
 
