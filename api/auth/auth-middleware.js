@@ -1,9 +1,10 @@
 const jwt = require('jsonwebtoken')
-const {  } = require('../../config')
+const { JWT_SECRET } = require('../../config')
 
 // AUTHENTICATION
 const restricted = (req, res, next) => {
-  next()
+  // pull token from request
+  
 }
 
 // AUTHORIZATION
